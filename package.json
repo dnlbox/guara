@@ -1,0 +1,30 @@
+{
+  "name": "guara",
+  "version": "0.0.1",
+  "description": "Showcase for VueJS and BulmaCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnlbox/guara.git"
+  },
+  "keywords": [
+    "vue.js;",
+    "bulma;",
+    "javascript;",
+    "html;",
+    "gulp;",
+    "jade"
+  ],
+  "author": "Daniel Veronez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dnlbox/guara/issues"
+  },
+  "homepage": "https://github.com/dnlbox/guara#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
