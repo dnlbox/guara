@@ -2,19 +2,32 @@
 
 var gulp    = require('gulp');
 var connect = require('gulp-connect');
-var jade    = require('gulp-jade');
+var pug     = require('gulp-pug');
 var changed = require('gulp-changed');
 
-gulp.task('jade', function() {
-  return gulp.src('src/**/*.jade')
+gulp.task('pug', function() {
+  return gulp.src('src/**/*.pug')
     .pipe(changed('build', {extension:'.html'}))
-    .pipe(jade())
+    .pipe(pug())
     .pipe(gulp.dest('build'))
     .pipe(connect.reload());
 })
 
+gulp.task('js', function() {
+  return gulp.src('src/**/*.js')
+    .pipe(changed('build', {extension:'.js'}))
+    .pipe(gulp.dest('build'))
+    .pipe(connect.reload());
+})
+
+gulp.task('vue', function() {
+  return gulp.src('bower_components/vue/dist/vue.js')
+    .pipe(gulp.dest('build/js'));
+})
+
 gulp.task('watch', function() {
-  gulp.watch('src/**/*.jade', ['jade']);
+  gulp.watch('src/**/*.pug', ['pug']);
+  gulp.watch('src/**/*.js', ['js']);
 })
 
 gulp.task('connect', function() {
@@ -25,5 +38,5 @@ gulp.task('connect', function() {
   });
 })
 
-gulp.task('default', ['jade', 'watch', 'connect']);
+gulp.task('default', ['pug', 'js', 'vue', 'watch', 'connect']);
 
