@@ -2,7 +2,7 @@
 
 var gulp    = require('gulp');
 var connect = require('gulp-connect');
-var pug     = require('gulp-pug');      // replace Jade
+var pug     = require('gulp-pug');      // new name of Jade
 var changed = require('gulp-changed');
 var babel   = require('gulp-babel');
 var sass    = require('gulp-sass');
