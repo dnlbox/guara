@@ -7,6 +7,9 @@ html
     link(rel='stylesheet' href='css/bulma.css')
     link(rel='stylesheet' href='css/app.css')
     link(rel='icon' type='image/x-icon' size='any' href='images/favicon.ico')
+    meta(name='google-signin-scope' content='profile email')
+    meta(name='google-signin-client_id' content='716603792118-tjf7frba8pe8840447vbh6ddtnlou9su.apps.googleusercontent.com')
+    script(src='https://apis.google.com/js/platform.js' async defer)
   body
     #app
       section.home.hero.is-fullheight
@@ -14,6 +17,7 @@ html
           .container
             h1.title.white Guara
             h2.subtitle.white Youtube player
-            a.button.is-outlined.is-primary.is-primary Login
+            br
+            .g-signin2(data-onsuccess='onSignIn')
     script(type='text/javascript', src='js/vue.js')
-    script(type='text/javascript', src='index.js')
+    script(type='text/javascript', src='app.js')
