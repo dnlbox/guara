@@ -1,13 +1,9 @@
 /**
- *
  *  Gulp Aurora
  *  Boilerplate for Web Development
- *  Note: For Guara app,
- *        using Vue.js and Bulma css
  *
  *  Daniel Leite (2017)
  *  MIT License;
- *
  */
 'use strict';
 
@@ -22,6 +18,7 @@ var size     = require('gulp-size');
 var plumber  = require('gulp-plumber');
 var util     = require('gulp-util');
 var imagemin = require('gulp-imagemin');
+import paths from './gulp/paths'
 
 // Error handler
 var onError = function (err) {
@@ -42,7 +39,7 @@ gulp.task('html', function() {
 
 // Process Javascript
 gulp.task('js', function() {
-  return gulp.src('app/**/*.js')
+  return gulp.src(paths.scripts)
     .pipe(plumber({ errorHandler: onError }))
     .pipe(changed('build', {extension:'.js'}))
     .pipe(babel())
