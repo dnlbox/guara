@@ -16,5 +16,3 @@ Run as mobile app is not part of the scope.
 
 ### Contact
 Twitter: [dnlbox](https://twitter.com/dnlbox)
-
-notes
